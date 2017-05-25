@@ -1,38 +1,38 @@
 #include <stdio.h>
 
-void swap(char* a, char* b);
-void insertion_sort( char s[], int n );
+void insertion_sort( int arr[], int n );
+void print_array( int arr[], int n );
 
 int main() {
-    char str[] = "Hello";
-
-    int len = strlen( str );
-
-    printf( "%d", len );
+    int str[] = {12, 11, 13, 5, 6, 324234, 23, 0, -1};
+    int len = sizeof(str)/sizeof(str[0]);
 
     insertion_sort( str, len );
-
-    printf( str );
+    print_array( str, len );
 
     return 0;
 }
 
-void swap( char* a, char* b ) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+void insertion_sort( int arr[], int n ) {
 
-void insertion_sort( char s[], int n ) {
-    int i, j;
-    for ( i = 1; i < n; i++ ) {
-        j = i;
+    int i, key, j;
 
-        while ( ( j > 0 ) && ( s[j] < s[j-1] ) ) {
-            swap( &s[j], &s[j-1] );
-            j = j - i;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i-1;
+
+        while ( j >= 0 && arr[j] > key ) {
+            arr[j+1] = arr[j];
+            j = j-1;
         }
+        arr[j+1] = key;
     }
 }
 
-
+void print_array( int arr[], int n ) {
+    int i;
+    for ( i=0; i < n; i++ ) {
+        printf("%i ", arr[i]);
+    }
+    printf("\n");
+}
