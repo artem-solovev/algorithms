@@ -1,7 +1,7 @@
-const binary_search = ( list, item ) => {
+const binarySearch = ( list, item ) => {
     let low = 0;
     let high = list.length - 1;
-    
+
     while ( low <= high ) {
         let mid = Math.floor((low + high) / 2);
         let guess = list[mid];
@@ -16,9 +16,9 @@ const binary_search = ( list, item ) => {
     }
 
     return null;
-}
+};
 
-const my_list = [1, 3, 5, 7, 9];
+const myList = [1, 3, 5, 7, 9];
 
-console.log( binary_search( my_list, 3 ) );
-console.log( binary_search( my_list, -1 ) );
+console.log( binarySearch( myList, 3 ) );
+console.log( binarySearch( myList, -1 ) );
