@@ -1,3 +1,9 @@
+/**
+ * Searches number from the list
+ * @param {Array} list
+ * @param {number} item Search item
+ * @return {(number | null)} Number if the value is found or NULL otherwise
+ */
 const binarySearch = ( list, item ) => {
     let low = 0;
     let high = list.length - 1;
