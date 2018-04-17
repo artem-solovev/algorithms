@@ -24,8 +24,9 @@ const findSmallest = ( arr ) => {
  */
 const selectionSort = ( arr ) => {
     if ( !arr.length ) return [];
-    let smallest = arr.splice( findSmallest( arr ), 1 );
-    return smallest.concat( selectionSort( arr ) );
+    let newArray = Array.prototype.slice.call( arr );
+    let smallest = newArray.splice( findSmallest( newArray ), 1 );
+    return smallest.concat( selectionSort( newArray ) );
 };
 
 let arr = [5, 3, 6, 2, 10];
