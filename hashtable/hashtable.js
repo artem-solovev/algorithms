@@ -7,12 +7,10 @@ let HashTable = function( obj ) {
     this._length = 0;
     this._items = ( function( obj ) {
         let items = {};
-
         for ( let p in obj ) {
-            items[p] = obj[p];
-            this.length++;
+                items[p] = obj[p];
+                this.length++;
         }
-
         return items;
     }( obj ) );
 
