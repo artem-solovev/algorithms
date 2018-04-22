@@ -1,5 +1,5 @@
 const quickSort = ( arr ) => {
-    if ( arr < 2 ) return arr;
+    if ( arr.length < 2 ) return arr;
 
     let pivot = arr[0];
 
