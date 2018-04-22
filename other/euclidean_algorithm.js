@@ -20,4 +20,4 @@ let getGCD = ( a, b ) => {
 const a = 1680;
 const b = 640;
 
-console.log( getGCD( a, b ) );
+console.log( getGCD( a, b ) ); // 80
