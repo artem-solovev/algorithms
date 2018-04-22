@@ -2,19 +2,15 @@
  * Recursive function of Euclidean algorithm
  *
  * @param {number} a first number
- * @param {number} b second number
+ * @param {number} b second number (base case)
  *
  * @return {number} GCD (greatest common divisor)
  */
 let getGCD = ( a, b ) => {
-    if ( a === 0 ) {
-        return b;
-    } else if ( b === 0 ) {
+    if ( !b ) {
         return a;
-    } else {
-        let remainder = a % b;
-        return getGCD( b, remainder );
     }
+    return getGCD( b, a % b );
 };
 
 const a = 1680;
