@@ -26,5 +26,10 @@
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1"
+  },
+  "dependencies": {
+    "center-align": "^1.0.1",
+    "log-symbols": "^2.2.0",
+    "unidecode": "^0.1.8"
   }
 }
