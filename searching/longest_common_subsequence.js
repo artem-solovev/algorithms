@@ -1,6 +1,6 @@
 
 /**
- * 
+ * Searches for LCS
  *
  * @param {string} string1 first string
  * @param {string} string2 second string
