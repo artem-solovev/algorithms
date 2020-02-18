@@ -2,7 +2,7 @@ module.exports = {
     "extends": "google",
     "parser": "babel-eslint",
     "rules": {
-        "indent": [2, "tab"],
+        "indent": [2, "tab", { "SwitchCase": 1 }],
         "no-tabs": 0,
         "max-len": [2, {"code": 100}],
         "linebreak-style": [2, "windows"],
